@@ -4,105 +4,201 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rachel Leung | Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <span class="logo">Rachel Leung</span>
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <span class="logo">RL</span>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
   <section id="hero">
-    <h1>Hi, I'm Rachel 👋</h1>
-    <p>IT Graduate · Melbourne, Australia</p>
-    <p class="tagline">I build things, break things, and learn from both.</p>
-    <a href="#projects" class="btn">View My Work</a>
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I'm Rachel 👋</p>
+      <h1>IT Graduate &<br/><span class="accent">Problem Solver</span></h1>
+      <p class="hero-sub">Building clean software and turning data into decisions —<br/>based in Melbourne, Australia.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View My Work</a>
+        <a href="#contact" class="btn-secondary">Get In Touch</a>
+      </div>
+    </div>
+    <div class="hero-glow"></div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm a Bachelor of Information Technology graduate from Victoria University, Melbourne.
-      I have a "just try it" mindset — I love exploring different areas of tech, from
-      front-end development to data analytics and machine learning.
-    </p>
-    <p>
-      Alongside my studies, I worked as a barista — which taught me how to stay calm
-      under pressure, communicate well, and always show up with a good attitude.
-      I bring that same energy to everything I build.
-    </p>
-    <p>
-      I'm currently looking for junior opportunities in frontend development,
-      data analytics, or IT support where I can keep growing and contribute from day one.
-    </p>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-grid">
-      <span>JavaScript</span>
-      <span>React</span>
-      <span>HTML & CSS</span>
-      <span>Python</span>
-      <span>REST APIs</span>
-      <span>Machine Learning</span>
-      <span>Data Analytics</span>
-      <span>Git & GitHub</span>
+    <div class="section-inner">
+      <h2>About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a Bachelor of Information Technology graduate from Victoria University, Melbourne — with a <strong>"just try it"</strong> mindset and a genuine curiosity for how technology solves real problems.</p>
+          <p>I've worked across frontend development, data analytics, and product thinking through internships and university projects. Outside tech, I've spent years as a barista — which taught me more about communication, composure, and customer empathy than any classroom.</p>
+          <p>I'm looking for a junior role where I can keep learning, ship real work, and grow fast.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat"><span>5+</span><p>Projects Built</p></div>
+          <div class="stat"><span>2+</span><p>Internships</p></div>
+          <div class="stat"><span>1</span><p>Degree Earned</p></div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- PROJECTS -->
   <section id="projects">
-    <h2>Projects</h2>
+    <div class="section-inner">
+      <h2>Featured Projects</h2>
+      <p class="section-sub">Things I've built, shipped, and learned from.</p>
 
-    <div class="project-card">
-      <h3>🌐 Multilingual Translation Tool</h3>
-      <p>
-        A React web app that translates text across multiple languages using the ChatGPT API.
-        Features include real-time translation and OCR-based text extraction from images —
-        making it useful for travellers and multilingual users.
-      </p>
-      <div class="tags">
-        <span>React</span><span>ChatGPT API</span><span>OCR</span><span>JavaScript</span>
+      <!-- TerraTalk — Flagship -->
+      <div class="project-featured">
+        <div class="project-label">🚀 Flagship Project</div>
+        <h3>TerraTalk</h3>
+        <p class="project-impact">A smarter translation tool that understands <em>context</em> — not just words.</p>
+        <p class="project-desc">Most translation tools like Google Translate ignore tone. TerraTalk lets users choose their translation context — formal, casual, professional — powered by the ChatGPT API and built in React.</p>
+        <div class="project-tags">
+          <span>React</span><span>ChatGPT API</span><span>JavaScript</span><span>OCR</span>
+        </div>
+      </div>
+
+      <!-- Other Projects Grid -->
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-icon">📱</div>
+          <h3>Terno App</h3>
+          <p>An internship matching platform that connects students with placements aligned to their skills and goals — bridging the gap between education and industry.</p>
+          <div class="project-tags">
+            <span>Product Design</span><span>Mobile App</span><span>UX</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">⚡</div>
+          <h3>WIRE</h3>
+          <p>A solo web project focused on clean UI and practical functionality — demonstrating independent problem-solving and end-to-end development ownership.</p>
+          <div class="project-tags">
+            <span>Solo Project</span><span>Web Dev</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">🗂️</div>
+          <h3>SharePoint Migration</h3>
+          <p>Worked with VU Engagement & Advancement team to restructure and migrate data across SharePoint — improving team-wide information accessibility and organisation.</p>
+          <div class="project-tags">
+            <span>SharePoint</span><span>Data Organisation</span><span>Internship</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">🌐</div>
+          <h3>WordPress Website</h3>
+          <p>Designed and built a complete website using WordPress — handling layout, content structure, and visual design to deliver a polished, client-ready result.</p>
+          <div class="project-tags">
+            <span>WordPress</span><span>Web Design</span><span>UI</span>
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
 
-    <div class="project-card">
-      <h3>🧠 Stroke Prediction Model</h3>
-      <p>
-        A machine learning model that predicts stroke risk based on patient health data.
-        Applied SMOTE to handle class imbalance, performed data cleaning and feature
-        engineering, and evaluated multiple models — with Random Forest achieving the best results.
-      </p>
-      <div class="tags">
-        <span>Python</span><span>Random Forest</span><span>SMOTE</span><span>Data Cleaning</span>
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-inner">
+      <h2>Skills</h2>
+      <p class="section-sub">Technologies and tools I work with.</p>
+      <div class="skills-categories">
+        <div class="skill-group">
+          <h4>Frontend</h4>
+          <div class="skill-pills">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Data & ML</h4>
+          <div class="skill-pills">
+            <span>Python</span><span>Random Forest</span><span>KNN</span><span>SVM</span><span>SMOTE</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h4>Tools & Platforms</h4>
+          <div class="skill-pills">
+            <span>Git</span><span>GitHub</span><span>SharePoint</span><span>WordPress</span><span>REST APIs</span>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
 
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-inner">
+      <h2>Experience</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>IT Intern <span>· Multiple Organisations</span></h3>
+            <p class="timeline-date">2023 – 2024 · Melbourne, AU</p>
+            <p>Contributed to real projects across frontend development, data work, and SharePoint administration. Gained hands-on experience working in professional team environments.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Barista <span>· Hospitality</span></h3>
+            <p class="timeline-date">Part-time · Melbourne, AU</p>
+            <p>Developed strong communication, composure under pressure, and customer-first thinking — skills I bring directly into collaborative tech environments.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Bachelor of Information Technology <span>· Victoria University</span></h3>
+            <p class="timeline-date">Graduated 2024 · Melbourne, AU</p>
+            <p>Studied software development, data analytics, machine learning, and systems design. Built multiple projects independently and in teams.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
-    <h2>Contact</h2>
-    <p>I'm currently open to junior roles and internships. Feel free to reach out!</p>
-    <div class="contact-links">
-      <a href="https://github.com/rachintech" target="_blank">💻 GitHub</a>
-      <a href="https://www.linkedin.com/in/rach-leung" target="_blank">🔗 LinkedIn</a>
+    <div class="section-inner contact-inner">
+      <h2>Let's Connect</h2>
+      <p>I'm open to junior roles, internships, and interesting collaborations.<br/>Find me on LinkedIn or GitHub — I'd love to connect.</p>
+      <div class="contact-links">
+  <a href="https://github.com/rachintech" target="_blank">GitHub</a>
+  <a href="https://www.linkedin.com/in/rach-leung/" target="_blank">LinkedIn</a>
+</div>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Rachel Leung · Built with HTML, CSS & ☕</p>
+    <p>Designed & built by Rachel Leung · Melbourne 🇦🇺 · 2025</p>
   </footer>
 
   <script src="script.js"></script>
