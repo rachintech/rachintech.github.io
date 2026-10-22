@@ -1,0 +1,88 @@
+/* projects.css: extra styles for clickable project cards and project detail pages.
+   Loaded AFTER style.css. It reuses your palette (#7c6af7 / #a78bfa accents,
+   #1a1a2e cards, #9ca3af / #d1d5db text). Nothing in style.css is changed. */
+
+/* 1. Clickable project cards (the link stretches over the whole card) */
+.project-card { position: relative; }  /* .project-featured already has this */
+
+.project-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #a78bfa;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.4);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.project-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.project-featured:hover .project-link,
+.project-card:hover .project-link { color: #f0f0f0; border-color: #7c6af7; }
+.project-link:focus-visible { outline: none; }
+.project-link:focus-visible::after { outline: 3px solid #a78bfa; outline-offset: 3px; }
+
+/* 2. Project detail pages */
+#navbar a.logo { text-decoration: none; }
+.case-page { padding: 7rem 2rem 3rem; }
+.case-page .section-sub { margin-bottom: 1.5rem; }
+.case-page h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+  color: #f0f0f0;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.back-link:hover,
+.back-link:focus-visible { color: #7c6af7; }
+
+.case-block { padding: 2rem 0; border-top: 1px solid rgba(255, 255, 255, 0.07); }
+.case-block:first-of-type { margin-top: 2.5rem; }
+.case-block h2 { font-size: 1.5rem; margin-bottom: 1rem; }
+.case-block p,
+.case-block li { color: #d1d5db; margin-bottom: 0.6rem; }
+.case-block ul { padding-left: 1.2rem; }
+.case-block li::marker { color: #7c6af7; }
+.case-block strong { color: #f0f0f0; }
+.case-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+
+/* Screenshots */
+.shot { margin: 0; }
+.shot img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.07); }
+.shot-ph {
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  background: #1a1a2e;
+  border: 1px dashed rgba(124, 106, 247, 0.4);
+  border-radius: 12px;
+}
+.shot figcaption { margin-top: 0.6rem; font-size: 0.85rem; color: #9ca3af; }
+
+/* Clearly marked placeholders: search for "[" to find them */
+.ph { background: rgba(251, 191, 36, 0.15); color: #fbbf24; padding: 0 0.3rem; border-radius: 4px; }
+
+/* Accessibility: no scroll-fade or hover motion for people who ask for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-up { opacity: 1; transform: none; transition: none; }
+  .project-featured, .project-card, .btn-primary, .btn-secondary { transition: none; }
+}
